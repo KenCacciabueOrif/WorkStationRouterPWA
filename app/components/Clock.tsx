@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router";
 import { Temporal } from "temporal-polyfill";
 // library pour les formats dates
 
@@ -42,71 +43,87 @@ export function Clock() {
   let textSize = ''
 
   let clockHTML
-  if (parentBoxH <= 50 || parentBoxW <= 100) {
+  if (parentBoxH <= 10 || parentBoxW <= 100) {
     textSize = 'text-[8px] w-full p-1'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-  } else if (parentBoxH <= 200 || parentBoxW <= 300) {
+  } else if (parentBoxH <= 25 || parentBoxW <= 300) {
     textSize = 'text-xl w-full p-1'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-  } else if (parentBoxH <= 400 || parentBoxW <= 500) {
+  } else if (parentBoxH <= 50 || parentBoxW <= 500) {
     textSize = 'text-4xl w-full p-1'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-  } else if (parentBoxH <= 600 || parentBoxW <= 700) {
+  } else if (parentBoxH <= 75 || parentBoxW <= 700) {
     textSize = 'text-5xl w-full p-1'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-  } else if (parentBoxH <= 800 || parentBoxW <= 900) {
+  } else if (parentBoxH <= 100 || parentBoxW <= 900) {
     textSize = 'text-6xl w-full p-2'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-  } else if (parentBoxH <= 1000 || parentBoxW <= 1100) {
+  } else if (parentBoxH <= 150 || parentBoxW <= 1100) {
     textSize = 'text-7xl w-full p-4'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-  } else if (parentBoxH <= 1200 || parentBoxW <= 1300) {
+  } else if (parentBoxH <= 175 || parentBoxW <= 1300) {
     textSize = 'text-8xl w-full p-6'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-  } else if (parentBoxH >= 1200 || parentBoxW >= 1200) {
+  } else if (parentBoxH >= 200 || parentBoxW >= 1200) {
     textSize = 'text-9xl w-full p-8'
     clockHTML = (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className={`flex ${textSize}`}>
-          {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
-        </div>
+        <NavLink to="/clock" className="flex flex-col items-center justify-center h-full w-full">
+          <div className={`flex ${textSize}`}>
+            {currentTime.year}:{currentTime.month}:{currentTime.day} {currentTime.hour}:{currentTime.minute}:{currentTime.second}
+          </div>
+        </NavLink>
       </div>)
-    
+
   }
 
   return (
