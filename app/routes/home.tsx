@@ -1,5 +1,14 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Clock } from "~/components/Clock";
+
+/**
+ * @author Ken Cacciabue
+ * @date 13.08.2025
+ * @name home
+ * @description
+ * Home route of the app
+ * 
+ */
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +18,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <Clock />;
 }
