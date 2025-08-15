@@ -1,5 +1,8 @@
+import { CalendarHour } from "~/components/CalendarHour";
 import type { Route } from "./+types/home";
 import { Clock } from "~/components/Clock";
+import { useState } from "react";
+import React from "react";
 
 /**
  * @author Ken Cacciabue
@@ -10,7 +13,7 @@ import { Clock } from "~/components/Clock";
  * 
  */
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
     { name: "description", content: "Welcome to React Router!" },
@@ -18,5 +21,16 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Clock />;
+  const [comp, setComp] = useState([<CalendarHour />, <Clock />])
+  return (
+    <>
+      {comp.map((composant, index) => {
+        composant
+        const proppedComponent = React.cloneElement(composant, {
+          key: index,
+          nbBrotherComp: comp.length
+        })
+        return proppedComponent
+      })}
+    </>);
 }
