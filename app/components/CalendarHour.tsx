@@ -84,7 +84,7 @@ export function CalendarHour({ key, compDiv = 1 }: { key?: number, compDiv?: num
 
   return (
     <main id="CalendarHour" key={key} className={`flex flex-col items-left w-full justify-left`} style={{ height: parentBoxH / compDiv, paddingLeft: ((currentBoxW) / 2) / 100, paddingRight: ((currentBoxW) / 2) / 100, paddingTop: ((currentBoxH) / 2) / 100, paddingBottom: ((currentBoxH) / 2) / 100 }} >
-      <p style={{ fontSize: (smallestBoxD / minuteList.length) }}>Heure</p>
+      <div style={{ fontSize: (smallestBoxD / minuteList.length) }}>Heure</div>
       <NavLink to="/calendarHour" className="flex flex-col h-full" >
         {mapList}
       </NavLink>
